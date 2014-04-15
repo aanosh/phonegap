@@ -49,11 +49,15 @@ var app = {
 };
 
 function capturePhoto(){
-    navigator.camera.getPicture(uploadPhoto,null,{sourceType:1,quality:60});
- }
-
-function uploadPhoto(data){
-// this is where you would send the image file to server
-//output image to screen
-    cameraPic.src = "data:image/jpeg;base64," + data;
+    cordova.plugins.barcodeScanner.scan(
+      function (result) {
+          alert("We got a barcode\n" +
+                "Result: " + result.text + "\n" +
+                "Format: " + result.format + "\n" +
+                "Cancelled: " + result.cancelled);
+      }, 
+      function (error) {
+          alert("Scanning failed: " + error);
+      }
+    );
 }
