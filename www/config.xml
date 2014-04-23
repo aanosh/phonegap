@@ -6,7 +6,7 @@
         id        = "com.doctometer.Doctometer"
         version   = "1.0">
 
-    <name>Test</name>
+    <name>Doctometer</name>
 
     <description>
         Commercial
