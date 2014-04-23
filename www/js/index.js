@@ -1,4 +1,3 @@
-
 function scanBarcode() {
     cordova.plugins.barcodeScanner.scan(
       function (result) {
