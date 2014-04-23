@@ -37,9 +37,9 @@ function scanBarcode() {
  
             options.params = params;
             options.chunkedMode = false;
- 
-            var ft = new FileTransfer();
-            ft.upload(imageURI, "http://demo.testindev.com/", win, fail, options);
+            alert(options.fileName);
+//            var ft = new FileTransfer();
+//            ft.upload(imageURI, "http://demo.testindev.com/", win, fail, options);
     }
 
 
