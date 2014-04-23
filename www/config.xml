@@ -3,10 +3,10 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.doctometer"
+        id        = "com.doctometer.Doctometer"
         version   = "1.0">
 
-    <name>Doctometer</name>
+    <name>Test</name>
 
     <description>
         Commercial
