@@ -1,7 +1,7 @@
-
-function capturePhoto() {
-    navigator.notification.alert("PhoneGap is working", function(){}, "", "");
+function getImage() {
+    alert(11);
 }
+
 
 //        function getImage() {
 //            // Открываем галерею
