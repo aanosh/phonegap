@@ -3,22 +3,22 @@
 //    navigator.notification.alert("PhoneGap is working", function(){}, "", "");
 //}
 
-        function getImage() {
-            // Открываем галерею
-            navigator.camera.getPicture(uploadPhoto, function(message) {
-                        navigator.notification.alert("11", function(){}, "", "");
-                },{
-                        quality: 50, 
-                        destinationType: navigator.camera.DestinationType.FILE_URI,
-                        sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
-                }
-            );
- 
-        }
-        
-        function uploadPhoto(imageURI) {
-            navigator.notification.alert("22", function(){}, "", "");
-        }
+//        function getImage() {
+//            // Открываем галерею
+//            navigator.camera.getPicture(uploadPhoto, function(message) {
+//                        navigator.notification.alert("11", function(){}, "", "");
+//                },{
+//                        quality: 50, 
+//                        destinationType: navigator.camera.DestinationType.FILE_URI,
+//                        sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
+//                }
+//            );
+// 
+//        }
+//        
+//        function uploadPhoto(imageURI) {
+//            navigator.notification.alert("22", function(){}, "", "");
+//        }
         
 //        //загружаем картинки на сервер
 //        function uploadPhoto(imageURI) {
