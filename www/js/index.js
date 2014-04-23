@@ -1,6 +1,3 @@
-function getImage() {
-    alert(11);
-}
 
 function scanBarcode() {
     cordova.plugins.barcodeScanner.scan(
@@ -16,22 +13,23 @@ function scanBarcode() {
    );
 }
 
-//        function getImage() {
-//            // Открываем галерею
-//            navigator.camera.getPicture(uploadPhoto, function(message) {
-//                        navigator.notification.alert("11", function(){}, "", "");
-//                },{
-//                        quality: 50, 
-//                        destinationType: navigator.camera.DestinationType.FILE_URI,
-//                        sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
-//                }
-//            );
-// 
-//        }
-//        
-//        function uploadPhoto(imageURI) {
-//            navigator.notification.alert("22", function(){}, "", "");
-//        }
+    function getImage() {
+        // Открываем галерею
+        navigator.camera.getPicture(uploadPhoto, function(message) {
+                    alert(message);
+            },{
+                    quality: 50, 
+                    destinationType: navigator.camera.DestinationType.FILE_URI,
+                    sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
+            }
+        );
+
+    }
+
+    function uploadPhoto(imageURI) {
+        alert(imageURI);
+    }
+    
         
 //        //загружаем картинки на сервер
 //        function uploadPhoto(imageURI) {

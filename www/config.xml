@@ -82,6 +82,7 @@
 
     <gap:plugin name="de.appplant.cordova.plugin.local-notification" />
     <gap:plugin name="com.phonegap.plugins.barcodescanner"/>
+    <gap:plugin name="org.apache.cordova.camera"/>
     <!--
         Define access to external domains.
 
