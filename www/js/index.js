@@ -1,15 +1,15 @@
-function scanBarcode() {
-    cordova.plugins.barcodeScanner.scan(
-        function (result) {
-            if(result.cancelled == 0) {
-                navigator.notification.alert("Result: " + result.text + "\n", function(){}, "", "");
+    function scanBarcode() {
+        cordova.plugins.barcodeScanner.scan(
+            function (result) {
+                if(result.cancelled == 0) {
+                    navigator.notification.alert("Result: " + result.text + "\n", function(){}, "", "");
+                }
+            }, 
+            function (error) {
+                alert("Scanning failed: " + error);
             }
-        }, 
-        function (error) {
-            alert("Scanning failed: " + error);
-        }
-    );
-}
+        );
+    }
 
     function getImage() {
         // Открываем галерею
@@ -41,15 +41,31 @@ function scanBarcode() {
     }
 
 
-        //если все хорошо
-        function win(r) {
-            console.log("Code = " + r.responseCode);
-            console.log("Response = " + r.response);
-            console.log("Sent = " + r.bytesSent);
-            alert(r.response);
-        }
-        
-        //если ошибка
-        function fail(error) {
-            alert("An error has occurred: Code = " + error.code);
-        }
+    //если все хорошо
+    function win(r) {
+        console.log("Code = " + r.responseCode);
+        console.log("Response = " + r.response);
+        console.log("Sent = " + r.bytesSent);
+        alert(r.response);
+    }
+
+    //если ошибка
+    function fail(error) {
+        alert("An error has occurred: Code = " + error.code);
+    }
+    
+    function getCompanyList() {
+        url = "http://demo.testindev.com/api.php";
+        $.ajax({
+            type: "GET",
+            url: url,
+            timeout: 60 * 1000,
+            data: {
+                'action' : 'getCompanyList'
+            }
+        }).done(function (data) {
+            alert('hey');
+        }).fail(function (a, b, c) {
+            alert('Service is temporarily unavailable');
+        });
+    }
