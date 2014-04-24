@@ -5,9 +5,10 @@ function scanBarcode() {
 //                  "Result: " + result.text + "\n" +
 //                  "Format: " + result.format + "\n" +
 //                  "Cancelled: " + result.cancelled);
-            if(result.cancelled != 0) {
-                navigator.notification.alert("Result: " + result.text + "\n", function(){}, "", "");
-            }
+alert(result.cancelled);
+//            if(result.cancelled != 0) {
+//                navigator.notification.alert("Result: " + result.text + "\n", function(){}, "", "");
+//            }
         }, 
         function (error) {
             alert("Scanning failed: " + error);
