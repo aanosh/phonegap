@@ -5,7 +5,9 @@ function scanBarcode() {
 //                  "Result: " + result.text + "\n" +
 //                  "Format: " + result.format + "\n" +
 //                  "Cancelled: " + result.cancelled);
-            navigator.notification.alert("Result: " + result.text + "\n", function(){}, "", "");
+            if(result.cancelled != 0) {
+                navigator.notification.alert("Result: " + result.text + "\n", function(){}, "", "");
+            }
         }, 
         function (error) {
             alert("Scanning failed: " + error);
