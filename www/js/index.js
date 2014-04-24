@@ -65,7 +65,7 @@
             }
         }).done(function (data) {
             alert('hey');
-        }).fail(function (a, b, c) {
+        }).fail(function () {
             alert('Service is temporarily unavailable');
         });
     }
