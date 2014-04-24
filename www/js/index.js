@@ -1,11 +1,6 @@
 function scanBarcode() {
     cordova.plugins.barcodeScanner.scan(
         function (result) {
-//            alert("We got a barcode\n" +
-//                  "Result: " + result.text + "\n" +
-//                  "Format: " + result.format + "\n" +
-//                  "Cancelled: " + result.cancelled);
-
             if(result.cancelled == 0) {
                 navigator.notification.alert("Result: " + result.text + "\n", function(){}, "", "");
             }
