@@ -64,7 +64,7 @@
                 'action' : 'getCompanyList'
             }
         }).done(function (data) {
-            alert('hey');
+            alert(data);
         }).fail(function () {
             alert('Service is temporarily unavailable');
         });
