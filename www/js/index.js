@@ -67,7 +67,7 @@
                 xhr.setRequestHeader("Authorization", "Basic " + btoa(username + ":" + password)); 
             }
         }).done(function (data) {
-            alert(data);
+            alert(data.data[0][0].name);
         }).fail(function () {
             alert('Service is temporarily unavailable');
         });
