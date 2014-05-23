@@ -54,15 +54,12 @@
         alert("An error has occurred: Code = " + error.code);
     }
     
-    function getCompanyList() {
-        url = "http://demo.testindev.com/api.php";
+    function getUserList() {
+        url = "http://demo.testindev.com/api/v1/users";
         $.ajax({
             type: "GET",
             url: url,
             timeout: 60 * 1000,
-            data: {
-                'action' : 'getCompanyList'
-            }
         }).done(function (data) {
             alert(data);
         }).fail(function () {
