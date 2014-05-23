@@ -56,10 +56,16 @@
     
     function getUserList() {
         url = "http://api.testindev.com/api/v1/users";
+        var username = 'admin';
+        var password = '123456';
+        
         $.ajax({
             type: "GET",
             url: url,
             timeout: 60 * 1000,
+            beforeSend: function(xhr) { 
+                xhr.setRequestHeader("Authorization", "Basic " + btoa(username + ":" + password)); 
+            }
         }).done(function (data) {
             alert(data);
         }).fail(function () {
