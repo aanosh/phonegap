@@ -55,7 +55,7 @@
     }
     
     function getUserList() {
-        url = "http://demo.testindev.com/api/v1/users";
+        url = "http://api.testindev.com/api/v1/users";
         $.ajax({
             type: "GET",
             url: url,
